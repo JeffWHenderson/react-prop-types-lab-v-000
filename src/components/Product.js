@@ -22,9 +22,23 @@ Product.defaultProps = {
 Product.propTypes = {
   name: PropTypes.string.isRequired,
   producer: PropTypes.string,
-  hasWatermark: PropTypes.bool //arrayOf(PropTypes.string).isRequired,
-  color: PropTypes.string.isRequired, // a string — required, can only be `'white'`, `'eggshell-white'` or `'salmon'`
-  weight: PropTypes.int.isRequired // a number — required, ranges between 80 and 300
+  hasWatermark: PropTypes.bool, 
+  color: PropTypes.string.oneOf(['white', 'eggshell-white' or 'salmon']).isRequired, 
+  weight: function(props, propName, componentName){
+    let weight = props[propName]
+
+    if ( weight === undefined ) {
+  return new Error( `missing ${propName} prop` )
+}
+if ( !(typeof weight === 'number') ) {
+  return new Error( `${propName} is not a number` )
+}
+if ( !(weight >= 80 && weight <= 300) ) {
+  return new Error( `${propName} not between 80 and 300` )
+}
+  }
+
+  // PropTypes.int.isRequired // a number — required, ranges between 80 and 300
   // orderInfo: PropTypes.shape({
   //   customerName: PropTypes.string.isRequired,
   //   orderedAt: PropTypes.number.isRequired // We're using UNIX timestamps here
