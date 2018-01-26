@@ -19,9 +19,8 @@ Product.propTypes = {
   hasWatermark: PropTypes.bool //arrayOf(PropTypes.string).isRequired,
   color: PropTypes.string.isRequired, // a string — required, can only be `'white'`, `'eggshell-white'` or `'salmon'`
   weight: PropTypes.int.isRequired // a number — required, ranges between 80 and 300
-  orderInfo: PropTypes.shape({
-    customerName: PropTypes.string.isRequired,
-    orderedAt: PropTypes.number.isRequired // We're using UNIX timestamps here
-  }).isRequired
+  // orderInfo: PropTypes.shape({
+  //   customerName: PropTypes.string.isRequired,
+  //   orderedAt: PropTypes.number.isRequired // We're using UNIX timestamps here
+  // }).isRequired
 };
-
