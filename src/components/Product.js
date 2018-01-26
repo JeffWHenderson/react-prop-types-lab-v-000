@@ -5,13 +5,15 @@ import PropTypes from 'prop-types';
 class Order extends React.Component {
 
   render() {
-    <div>
-      <h1>{this.props.name}</h1>
-      <p>{this.props.producer}</p>
-      <p>{this.props.hasWatermark}</p>
-      <p>{this.props.color}</p>
-      <p>{this.props.weight}</p>
-    </div>
+    return (
+      <div>
+        <h1>{this.props.name}</h1>
+        <p>{this.props.producer}</p>
+        <p>{this.props.hasWatermark}</p>
+        <p>{this.props.color}</p>
+        <p>{this.props.weight}</p>
+      </div>
+    )
   }
 }
 
