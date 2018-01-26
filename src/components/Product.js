@@ -37,4 +37,6 @@ Product.propTypes = {
       return new Error( `${propName} not between 80 and 300` )
     }
   }
-};
+}
+
+export default Product
