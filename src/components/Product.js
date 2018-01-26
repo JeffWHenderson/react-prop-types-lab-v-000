@@ -1,9 +1,7 @@
-// Code Product Component Here
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class Order extends React.Component {
-
+class Product extends React.Component {
   render() {
     return (
       <div>
