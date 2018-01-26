@@ -9,7 +9,7 @@ class Order extends React.Component {
       <div>
         <h1>{this.props.name}</h1>
         <p>{this.props.producer}</p>
-        <p>{this.props.hasWatermark}</p>
+        <p>{this.props.hasWatermark ? "Yes" : "No"}</p>
         <p>{this.props.color}</p>
         <p>{this.props.weight}</p>
       </div>
